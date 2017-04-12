@@ -1,6 +1,13 @@
-<% @items.each do |item| %>
-  <h2><%= item.title %></h2>
-  <p><%= item.description %></p>
-  <%= link_to 'Edit', edit_item_path(item) %>
-  <%= link_to "Delete", item_path(item), method: :delete, data: { confirm: "Are you sure?" } %>
+<% if user_signed_in? %>
+  <h1>To Do List</h1>
+  <% @items.each do |item| %>
+    <h2><%= item.title %></h2>
+    <p><%= item.description %></p>
+    <%= link_to 'Edit', edit_item_path(item) %>
+    <%= link_to "Delete", item_path(item), method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+  <br/>
+  <%= link_to "New Item", new_item_path %>
+  <% else %>
+    <%= render 'layouts/static_landing_page' %>
 <% end %>
