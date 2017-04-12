@@ -21,6 +21,21 @@ before_action :find_item, only: [:show, :edit, :update, :destroy]
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to item_path(@item)
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+
+  end
+
   private
 
     def item_params
