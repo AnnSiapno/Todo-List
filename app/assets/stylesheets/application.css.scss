@@ -17,3 +17,115 @@
  // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+/***** General *****/
+
+body {
+  background-color: #fdfdfe;
+  text-align: center;
+}
+
+/*** Buttons ***/
+
+a.btn.btn-primary,
+input.btn.btn-default {
+  background-color: #27b2cd;
+  border: 2px solid #27b2cd;
+  font-size: 28px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+a.btn.btn-primary:hover,
+input.btn.btn-default:hover {
+  background-color: transparent;
+  color: #27b2cd;
+}
+
+/***** Navbar *****/
+
+nav.navbar.navbar-default {
+  border: none;
+  background-color: #39444A;
+  border-radius: 0;
+  margin-bottom: 0; 
+}
+
+ul.nav.navbar-nav.navbar-right a,
+div.navbar-header a {
+  padding: 20px 30px;
+}
+
+nav.navbar.navbar-default a {
+  color: #fdfdfe;
+  font-size: 26px;
+}
+
+nav.navbar.navbar-default a:hover {
+  color: #27b2cd;
+}
+
+div.navbar-header a.navbar-brand:hover {
+  color: #fdfdfe;
+}
+
+
+/***** Welcome/Homepage *****/
+
+div#homepage h1 {
+  font-size: 90px;
+}
+
+/***** Forms *****/
+
+h2.formTitle {
+  font-size: 70px;
+  margin-bottom: 45px;
+}
+
+div.form-inputs label {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+div.form-inputs .form-control {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 24px;
+  height: auto;
+}
+
+p.help-block {
+  font-size: 26px;
+}
+
+.form-group {
+  margin-top: 35px;
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  margin: 0;
+  margin-left: -40px;
+}
+
+input#user_remember_me {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+div.user_remember_me label{
+  margin-bottom: 0;
+}
+
+div.links a {
+  font-size: 26px;
+  margin-top: 20px;
+  display: inline-block;
+}

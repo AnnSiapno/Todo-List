@@ -13,21 +13,23 @@
     <nav class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
-          <%= link_to "Checklist", root_path, class: "navbar-brand" %>
+          <%= link_to "To Do List", root_path, class: "navbar-brand" %>
         </div>
-        <ul class="nav navbar-nav">
-          <%= link_to "Sign Up", new_user_registration_path %>
+        <ul class="nav navbar-nav navbar-right">
           <% if current_user.present? %>
             <li><%= link_to "Sign Out", destroy_user_session_path, class: "navbar-right", method: :delete %></li>
           <% else %>
             <li><%= link_to "Log In", new_user_session_path, class: "navbar-right" %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
           <% end %>
         </ul>
       </div>
     </nav>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="alerts">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    </div>
 
     <%= yield %>
   </body>
